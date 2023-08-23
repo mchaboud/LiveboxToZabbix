@@ -199,11 +199,19 @@ internal class Livebox4WS
         HttpResponseMessage res = await client.SendAsync(reqmsg);
         if (res.IsSuccessStatusCode)
         {
+            try
+            {
 #if DEBUG
-            Console.WriteLine(await res.Content.ReadAsStringAsync());
+                Console.WriteLine(await res.Content.ReadAsStringAsync());
 #endif
-            ZS_Response zbxResp = await OnSuccess.Invoke(res);
-            Console.WriteLine($"{DateTime.Now:dd:MM:yyyy-HH:mm:ss:ff} {zbxResp.response} {zbxResp.info}");
+                ZS_Response zbxResp = await OnSuccess.Invoke(res);
+                Console.WriteLine($"{DateTime.Now:dd:MM:yyyy-HH:mm:ss:ff} {zbxResp.response} {zbxResp.info}");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(await res.Content.ReadAsStringAsync());
+                throw;
+            }
         }
         else
             throw new Exception(res.StatusCode.ToString());
