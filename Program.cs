@@ -6,6 +6,17 @@ namespace LiveboxToZabbix;
 
 internal class Program
 {
+    static void ExceptionHandler(Action act)
+    {
+        try
+        {
+            act.Invoke();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.ToString());
+        }
+    }
     static void Main(string[] args)
     {
         XmlSerializer ser = new XmlSerializer(typeof(Configuration));
@@ -31,9 +42,9 @@ internal class Program
             livebox.PlayAuthAsync().GetAwaiter().GetResult();
             for (int i = 0; i < 30 * 4; i++)
             {
-                livebox.RetrieveADSLStatsAsync().GetAwaiter().GetResult();
-                livebox.RetrieveADSLStats2Async().GetAwaiter().GetResult();
-                livebox.RetrieveWanStatusAsync().GetAwaiter().GetResult();
+                ExceptionHandler(() => livebox.RetrieveADSLStatsAsync().GetAwaiter().GetResult());
+                ExceptionHandler(() => livebox.RetrieveADSLStats2Async().GetAwaiter().GetResult());
+                ExceptionHandler(() => livebox.RetrieveWanStatusAsync().GetAwaiter().GetResult());
 
                 Thread.Sleep(15 * 1000);
             }
