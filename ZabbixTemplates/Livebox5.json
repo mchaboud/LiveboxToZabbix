@@ -1,0 +1,1835 @@
+{
+    "zabbix_export": {
+        "version": "6.0",
+        "date": "2024-02-25T21:21:09Z",
+        "groups": [
+            {
+                "uuid": "36bff6c29af64692839d077febfc7079",
+                "name": "Templates/Network devices"
+            }
+        ],
+        "templates": [
+            {
+                "uuid": "3cc45761cd2b469b8d11977bba64b5f1",
+                "template": "Livebox5",
+                "name": "Livebox5",
+                "groups": [
+                    {
+                        "name": "Templates/Network devices"
+                    }
+                ],
+                "items": [
+                    {
+                        "uuid": "d35aa801515f4a70a408045af674a0da",
+                        "name": "AdditionalHardwareVersion",
+                        "type": "TRAP",
+                        "key": "AdditionalHardwareVersion",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "DeviceInfo"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "6214c8d757f144dfad20d18bbbcdcdde",
+                        "name": "AdditionalSoftwareVersion",
+                        "type": "TRAP",
+                        "key": "AdditionalSoftwareVersion",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "DeviceInfo"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "ca4411842c6f47929a313d8f8cac92b2",
+                        "name": "BaseMAC",
+                        "type": "TRAP",
+                        "key": "BaseMAC",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "DeviceInfo"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "c7e6c90bd2e5441ba0a817eec1e075fb",
+                        "name": "Bias",
+                        "type": "TRAP",
+                        "key": "Bias",
+                        "delay": "0",
+                        "units": "mA",
+                        "tags": [
+                            {
+                                "tag": "ONTStats"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "3fd9ef0eb20648d9b0c2ed90b3339615",
+                        "name": "ConnectionError",
+                        "type": "TRAP",
+                        "key": "ConnectionError",
+                        "delay": "0",
+                        "description": "0 => False\n1 => True",
+                        "preprocessing": [
+                            {
+                                "type": "REGEX",
+                                "parameters": [
+                                    "True",
+                                    "1"
+                                ],
+                                "error_handler": "CUSTOM_VALUE",
+                                "error_handler_params": "0"
+                            }
+                        ],
+                        "tags": [
+                            {
+                                "tag": "NMCStats"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "24edd8175ae843b3bae90f878d1a6a76",
+                        "name": "ConnectionState",
+                        "type": "TRAP",
+                        "key": "ConnectionState",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "WANStatus"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "8c3dd54c57e742089cb2470b4ab46a18",
+                        "name": "Country",
+                        "type": "TRAP",
+                        "key": "Country",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "DeviceInfo"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "a431c3a9c3844c8b8e7ebb9d6b815fd5",
+                        "name": "DefaultsLoaded",
+                        "type": "TRAP",
+                        "key": "DefaultsLoaded",
+                        "delay": "0",
+                        "preprocessing": [
+                            {
+                                "type": "REGEX",
+                                "parameters": [
+                                    "True",
+                                    "1"
+                                ],
+                                "error_handler": "CUSTOM_VALUE",
+                                "error_handler_params": "0"
+                            }
+                        ],
+                        "tags": [
+                            {
+                                "tag": "NMCStats"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "0e858819ac6749fd83211f4caa197521",
+                        "name": "Description",
+                        "type": "TRAP",
+                        "key": "Description",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "DeviceInfo"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "7e7df2a5e70a4990822cd9f855025a84",
+                        "name": "HardwareVersion",
+                        "type": "TRAP",
+                        "key": "DeviceInfoHardwareVersion",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "DeviceInfo"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "12f25fadc6b942f2b0b4f5960298d38e",
+                        "name": "SerialNumber",
+                        "type": "TRAP",
+                        "key": "DeviceInfoSerialNumber",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "DeviceInfo"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "989ab06b8b724d08a17076d36c0e9ed9",
+                        "name": "DeviceLog",
+                        "type": "TRAP",
+                        "key": "DeviceLog",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "DeviceInfo"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "c636631710b3431bbbadf46ae8b65b97",
+                        "name": "DeviceStatus",
+                        "type": "TRAP",
+                        "key": "DeviceStatus",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "DeviceInfo"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "0ef0aeb16bd54ce5b99589fff519969f",
+                        "name": "DNSServers",
+                        "type": "TRAP",
+                        "key": "DNSServers",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "WANStatus"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "d682fd3e5ddb41cea2cbdf325709d9fb",
+                        "name": "DownstreamCurrRate",
+                        "type": "TRAP",
+                        "key": "DownstreamCurrRate",
+                        "delay": "0",
+                        "units": "bps",
+                        "preprocessing": [
+                            {
+                                "type": "MULTIPLIER",
+                                "parameters": [
+                                    "1000"
+                                ]
+                            }
+                        ],
+                        "tags": [
+                            {
+                                "tag": "ONTStats"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "8aa64a02d58c4fdf89737e3556ce85d8",
+                        "name": "DownstreamMaxRate",
+                        "type": "TRAP",
+                        "key": "DownstreamMaxRate",
+                        "delay": "0",
+                        "units": "bps",
+                        "preprocessing": [
+                            {
+                                "type": "MULTIPLIER",
+                                "parameters": [
+                                    "1000"
+                                ]
+                            }
+                        ],
+                        "tags": [
+                            {
+                                "tag": "ONTStats"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "31ed3683816f4789a7836725d5deb16e",
+                        "name": "EnabledOptions",
+                        "type": "TRAP",
+                        "key": "EnabledOptions",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "DeviceInfo"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "d9438a2460744fb2aee7b180ce422a8d",
+                        "name": "EquipmentId",
+                        "type": "TRAP",
+                        "key": "EquipmentId",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "ONTStats"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "2a0678f5b9d346bc8a5f789622944578",
+                        "name": "ExternalIPAddress",
+                        "type": "TRAP",
+                        "key": "ExternalIPAddress",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "DeviceInfo"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "f4303e18d9a84aab862229842fc5bd52",
+                        "name": "FactoryResetScheduled",
+                        "type": "TRAP",
+                        "key": "FactoryResetScheduled",
+                        "delay": "0",
+                        "description": "0 => False\n1 => True",
+                        "preprocessing": [
+                            {
+                                "type": "REGEX",
+                                "parameters": [
+                                    "True",
+                                    "1"
+                                ],
+                                "error_handler": "CUSTOM_VALUE",
+                                "error_handler_params": "0"
+                            }
+                        ],
+                        "tags": [
+                            {
+                                "tag": "NMCStats"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "bd27df852585424c824ce44e1396293f",
+                        "name": "FirstUseDate",
+                        "type": "TRAP",
+                        "key": "FirstUseDate",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "DeviceInfo"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "f432a4338bdc4ab3baec6a4d20c14069",
+                        "name": "GponState",
+                        "type": "TRAP",
+                        "key": "GponState",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "WANStatus"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "27be769d3e3740f599a5967bc98d73b7",
+                        "name": "IPAddress",
+                        "type": "TRAP",
+                        "key": "IPAddress",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "WANStatus"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "90ef6a82f5534829a2c9e707ff92ade2",
+                        "name": "IPTVMode",
+                        "type": "TRAP",
+                        "key": "IPTVMode",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "NMCStats"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "000c72f836a14b7e967947078975e47b",
+                        "name": "IPv6Address",
+                        "type": "TRAP",
+                        "key": "IPv6Address",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "WANStatus"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "3753631ad657425f94c3a9a47c74464c",
+                        "name": "IPv6DelegatedPrefix",
+                        "type": "TRAP",
+                        "key": "IPv6DelegatedPrefix",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "WANStatus"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "83f8b7e140ed4ba28f91528c3df5d405",
+                        "name": "LastConnectionError",
+                        "type": "TRAP",
+                        "key": "LastConnectionError",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "WANStatus"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "9ea3d10fae5b4313be94586e33b4e77d",
+                        "name": "LinkState",
+                        "type": "TRAP",
+                        "key": "LinkState",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "WANStatus"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "eac49e29c6fd46f3a0511db0b700c22f",
+                        "name": "LinkType",
+                        "type": "TRAP",
+                        "key": "LinkType",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "WANStatus"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "4305f294e3ca49e9b1639af7706e6cd7",
+                        "name": "MACAddress",
+                        "type": "TRAP",
+                        "key": "MACAddress",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "WANStatus"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "9c6d9adc6cd8412bb20acf8f80937edc",
+                        "name": "Manufacturer",
+                        "type": "TRAP",
+                        "key": "Manufacturer",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "DeviceInfo"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "3dd33855d2884616b0dd191732828f1b",
+                        "name": "ManufacturerOUI",
+                        "type": "TRAP",
+                        "key": "ManufacturerOUI",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "DeviceInfo"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "4a7ce6c3b6314849b01d1f22c6b8cdeb",
+                        "name": "ManufacturerURL",
+                        "type": "TRAP",
+                        "key": "ManufacturerURL",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "DeviceInfo"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "f35828d13cfc4f4a9b79c9d426951ecb",
+                        "name": "MaxBitRateSupported",
+                        "type": "TRAP",
+                        "key": "MaxBitRateSupported",
+                        "delay": "0",
+                        "value_type": "FLOAT",
+                        "units": "mW",
+                        "preprocessing": [
+                            {
+                                "type": "MULTIPLIER",
+                                "parameters": [
+                                    "0.001"
+                                ]
+                            }
+                        ],
+                        "tags": [
+                            {
+                                "tag": "ONTStats"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "c15d60ec0e3e43c2bdb14b72d70853a1",
+                        "name": "ModelName",
+                        "type": "TRAP",
+                        "key": "ModelName",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "DeviceInfo"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "d2d4975217844cff814a779507b40c0c",
+                        "name": "ModemFirmwareVersion",
+                        "type": "TRAP",
+                        "key": "ModemFirmwareVersion",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "DeviceInfo"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "35205443dedb4214a8c37a042027613a",
+                        "name": "NumberOfReboots",
+                        "type": "TRAP",
+                        "key": "NumberOfReboots",
+                        "delay": "0",
+                        "tags": [
+                            {
+                                "tag": "DeviceInfo"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "8e56f6dad70b43408667d147df09dffc",
+                        "name": "OfferName",
+                        "type": "TRAP",
+                        "key": "OfferName",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "NMCStats"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "482aea96ec334352bd6b2150b1adf207",
+                        "name": "OfferType",
+                        "type": "TRAP",
+                        "key": "OfferType",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "NMCStats"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "a42738488e214f56aecf30ca1f336dce",
+                        "name": "OmciIsTmOwner",
+                        "type": "TRAP",
+                        "key": "OmciIsTmOwner",
+                        "delay": "0",
+                        "description": "0 => false\n1 => true",
+                        "preprocessing": [
+                            {
+                                "type": "REGEX",
+                                "parameters": [
+                                    "True",
+                                    "1"
+                                ],
+                                "error_handler": "CUSTOM_VALUE",
+                                "error_handler_params": "0"
+                            }
+                        ],
+                        "tags": [
+                            {
+                                "tag": "ONTStats"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "3db4d83983a545d39816484ac728d54b",
+                        "name": "ONTSoftwareVersion0",
+                        "type": "TRAP",
+                        "key": "ONTSoftwareVersion0",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "ONTStats"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "0cdc9983c798457c882448b3684c3616",
+                        "name": "ONTSoftwareVersion1",
+                        "type": "TRAP",
+                        "key": "ONTSoftwareVersion1",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "ONTStats"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "f9c593a671ed4eb1bc5b2eea69433197",
+                        "name": "ONTSoftwareVersionActive",
+                        "type": "TRAP",
+                        "key": "ONTSoftwareVersionActive",
+                        "delay": "0",
+                        "tags": [
+                            {
+                                "tag": "ONTStats"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "f3a9a6ddb0c24778a05ba7424a646ecf",
+                        "name": "HardwareVersion",
+                        "type": "TRAP",
+                        "key": "ONTStatsHardwareVersion",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "ONTStats"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "ea2ab5c2091d478280a9af5e336562f5",
+                        "name": "SerialNumber",
+                        "type": "TRAP",
+                        "key": "ONTStatsSerialNumber",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "ONTStats"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "6cde0e5f89044010adad5d61dbf01106",
+                        "name": "ONUState",
+                        "type": "TRAP",
+                        "key": "ONUState",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "description": "-O1 Initial: the OLT sends a message to the ONU to start the ONU, and the ONU enters the standby state;\n-O2 Standby: After receiving the message, the ONU extracts the delimiter value, power level, and pre-allocated compensation delay from the message, and adjusts its configurations accordingly, to support subsequent information exchanges.\n-O3 Serial number: The OLT sends a serial number (SN) request to the ONU. The ONU sends its SN to the OLT. After receiving the ONU\u2019s SN, the OLT allocates a temporary ONU-ID to the ONU.\n-O4 Ranging: The OLT sends a ranging request to the ONU. After receiving the ranging request from the OLT, the ONU responds with a message carrying its SN and ONU-ID. The OLT calculates the compensation delay and sends it to the ONU in a message. After receiving the message, the ONU sets the compensation delay accordingly.\n-O5 Operation: The OLT sends a password request to the ONU. The ONU returns a password to the OLT.\n-O6 Intermittent LODS state.\n-O7 Emergency Stop state.",
+                        "tags": [
+                            {
+                                "tag": "ONTStats"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "fc24a5bc9f924928b9398e0f5f84b16f",
+                        "name": "PonId",
+                        "type": "TRAP",
+                        "key": "PonId",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "ONTStats"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "6e9a02b11e3740b687e87e1dda817875",
+                        "name": "ProductClass",
+                        "type": "TRAP",
+                        "key": "ProductClass",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "DeviceInfo"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "0255aff6669e4d74a64db217ab593ef5",
+                        "name": "Protocol",
+                        "type": "TRAP",
+                        "key": "Protocol",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "WANStatus"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "5de773f4c2734c72b09aa8c9179d21f5",
+                        "name": "ProvisioningCode",
+                        "type": "TRAP",
+                        "key": "ProvisioningCode",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "DeviceInfo"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "495f43ef1622465fbae3691e8cd64fe5",
+                        "name": "ProvisioningState",
+                        "type": "TRAP",
+                        "key": "ProvisioningState",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "NMCStats"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "c230ddf043e542aa8492366d6487d280",
+                        "name": "RegistrationID",
+                        "type": "TRAP",
+                        "key": "RegistrationID",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "ONTStats"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "96dc2ed84cff430f9bd3bfaaf78db4ee",
+                        "name": "RemoteGateway",
+                        "type": "TRAP",
+                        "key": "RemoteGateway",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "WANStatus"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "fd0a0ee551114d1fb097ac63b8cb4c74",
+                        "name": "RescueVersion",
+                        "type": "TRAP",
+                        "key": "RescueVersion",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "DeviceInfo"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "a674ab0b3df3466baee5ee56a545d4f1",
+                        "name": "ResetOccurred",
+                        "type": "TRAP",
+                        "key": "ResetOccurred",
+                        "delay": "0",
+                        "description": "0 => False\n1 => True",
+                        "preprocessing": [
+                            {
+                                "type": "REGEX",
+                                "parameters": [
+                                    "True",
+                                    "1"
+                                ],
+                                "error_handler": "CUSTOM_VALUE",
+                                "error_handler_params": "0"
+                            }
+                        ],
+                        "tags": [
+                            {
+                                "tag": "DeviceInfo"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "557ad90cb9ba42108dfebe7dfa04c86c",
+                        "name": "RestoreOccurred",
+                        "type": "TRAP",
+                        "key": "RestoreOccurred",
+                        "delay": "0",
+                        "description": "0 => False\n1 => True",
+                        "preprocessing": [
+                            {
+                                "type": "REGEX",
+                                "parameters": [
+                                    "True",
+                                    "1"
+                                ],
+                                "error_handler": "CUSTOM_VALUE",
+                                "error_handler_params": "0"
+                            }
+                        ],
+                        "tags": [
+                            {
+                                "tag": "DeviceInfo"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "8cf5ba93d43447c6965aaf9ae043a745",
+                        "name": "SignalRxPower",
+                        "type": "TRAP",
+                        "key": "SignalRxPower",
+                        "delay": "0",
+                        "value_type": "FLOAT",
+                        "units": "dBm",
+                        "preprocessing": [
+                            {
+                                "type": "MULTIPLIER",
+                                "parameters": [
+                                    "0.001"
+                                ]
+                            }
+                        ],
+                        "tags": [
+                            {
+                                "tag": "ONTStats"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "55519fc45f61445c94bdabfd591ec840",
+                        "name": "SignalTxPower",
+                        "type": "TRAP",
+                        "key": "SignalTxPower",
+                        "delay": "0",
+                        "value_type": "FLOAT",
+                        "units": "dBm",
+                        "preprocessing": [
+                            {
+                                "type": "MULTIPLIER",
+                                "parameters": [
+                                    "0.001"
+                                ]
+                            }
+                        ],
+                        "tags": [
+                            {
+                                "tag": "ONTStats"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "2f1791b402dd4581ade3d44b122a9c46",
+                        "name": "SoftwareVersion",
+                        "type": "TRAP",
+                        "key": "SoftwareVersion",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "DeviceInfo"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "efe3c2b12b744e9989bb6f15f830d797",
+                        "name": "SpecVersion",
+                        "type": "TRAP",
+                        "key": "SpecVersion",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "DeviceInfo"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "c55adb973aba4c27a090de98f395e23a",
+                        "name": "StandbyOccurred",
+                        "type": "TRAP",
+                        "key": "StandbyOccurred",
+                        "delay": "0",
+                        "preprocessing": [
+                            {
+                                "type": "REGEX",
+                                "parameters": [
+                                    "True",
+                                    "1"
+                                ],
+                                "error_handler": "CUSTOM_VALUE",
+                                "error_handler_params": "0"
+                            }
+                        ],
+                        "tags": [
+                            {
+                                "tag": "DeviceInfo"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "646be22aeacf42dfb6dbca486fd87d47",
+                        "name": "Temperature",
+                        "type": "TRAP",
+                        "key": "Temperature",
+                        "delay": "0",
+                        "units": "\u00b0c",
+                        "tags": [
+                            {
+                                "tag": "ONTStats"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "c1dea0b38ff54763aa936afe0e2000bd",
+                        "name": "UpgradeOccurred",
+                        "type": "TRAP",
+                        "key": "UpgradeOccurred",
+                        "delay": "0",
+                        "description": "0 => False\n1 => True",
+                        "preprocessing": [
+                            {
+                                "type": "REGEX",
+                                "parameters": [
+                                    "True",
+                                    "1"
+                                ],
+                                "error_handler": "CUSTOM_VALUE",
+                                "error_handler_params": "0"
+                            }
+                        ],
+                        "tags": [
+                            {
+                                "tag": "DeviceInfo"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "1af51bfffee74169ae836ddfef49214f",
+                        "name": "UpstreamCurrRate",
+                        "type": "TRAP",
+                        "key": "UpstreamCurrRate",
+                        "delay": "0",
+                        "units": "bps",
+                        "preprocessing": [
+                            {
+                                "type": "MULTIPLIER",
+                                "parameters": [
+                                    "1000"
+                                ]
+                            }
+                        ],
+                        "tags": [
+                            {
+                                "tag": "ONTStats"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "2816e5515615446bada9303efe78628c",
+                        "name": "UpstreamMaxRate",
+                        "type": "TRAP",
+                        "key": "UpstreamMaxRate",
+                        "delay": "0",
+                        "units": "bps",
+                        "preprocessing": [
+                            {
+                                "type": "MULTIPLIER",
+                                "parameters": [
+                                    "1000"
+                                ]
+                            }
+                        ],
+                        "tags": [
+                            {
+                                "tag": "ONTStats"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "cdfadaf182314b6094e9d359e8353327",
+                        "name": "UpTime",
+                        "type": "TRAP",
+                        "key": "UpTime",
+                        "delay": "0",
+                        "units": "s",
+                        "tags": [
+                            {
+                                "tag": "DeviceInfo"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "85c52563d40249b3868eaf3705c9db37",
+                        "name": "Username",
+                        "type": "TRAP",
+                        "key": "Username",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "NMCStats"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "30bf47f20ad94a3592733ade420cf3e9",
+                        "name": "VeipPptpUni",
+                        "type": "TRAP",
+                        "key": "VeipPptpUni",
+                        "delay": "0",
+                        "description": "0 => false\n1 => true",
+                        "preprocessing": [
+                            {
+                                "type": "REGEX",
+                                "parameters": [
+                                    "True",
+                                    "1"
+                                ],
+                                "error_handler": "CUSTOM_VALUE",
+                                "error_handler_params": "0"
+                            }
+                        ],
+                        "tags": [
+                            {
+                                "tag": "ONTStats"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "a26587fdd27a4c679fec662d88a660dd",
+                        "name": "VendorConfigFileNumberOfEntries",
+                        "type": "TRAP",
+                        "key": "VendorConfigFileNumberOfEntries",
+                        "delay": "0",
+                        "tags": [
+                            {
+                                "tag": "DeviceInfo"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "e691f33806304342892cfdb132c6878c",
+                        "name": "VendorId",
+                        "type": "TRAP",
+                        "key": "VendorId",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "ONTStats"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "9edbb2a00ab340fb84f3e8e50748725a",
+                        "name": "VendorProductCode",
+                        "type": "TRAP",
+                        "key": "VendorProductCode",
+                        "delay": "0",
+                        "tags": [
+                            {
+                                "tag": "ONTStats"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "3457f8f3fa3140809a3594eb8c43a939",
+                        "name": "Voltage",
+                        "type": "TRAP",
+                        "key": "Voltage",
+                        "delay": "0",
+                        "units": "V",
+                        "preprocessing": [
+                            {
+                                "type": "MULTIPLIER",
+                                "parameters": [
+                                    "0.001"
+                                ]
+                            }
+                        ],
+                        "tags": [
+                            {
+                                "tag": "ONTStats"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "91c5068b3cce44e989f7d50000f73311",
+                        "name": "WanMode",
+                        "type": "TRAP",
+                        "key": "WanMode",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "NMCStats"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "c6eb695dbdf343e79f3e81686e75bae5",
+                        "name": "WanModeList",
+                        "type": "TRAP",
+                        "key": "WanModeList",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "NMCStats"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "aa404d2efd654cd3ba43ca22af67204e",
+                        "name": "WanState",
+                        "type": "TRAP",
+                        "key": "WanState",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "WANStatus"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "932dda345ac14ddd9d09e57445ebcacf",
+                        "name": "X_SOFTATHOME-COM_AdditionalSoftwareVersions",
+                        "type": "TRAP",
+                        "key": "X_SOFTATHOME-COM_AdditionalSoftwareVersions",
+                        "delay": "0",
+                        "trends": "0",
+                        "value_type": "TEXT",
+                        "tags": [
+                            {
+                                "tag": "DeviceInfo"
+                            }
+                        ]
+                    }
+                ],
+                "dashboards": [
+                    {
+                        "uuid": "afb9a9ed525a41568a3b022fa469c5c7",
+                        "name": "Livebox5Dashboard",
+                        "display_period": "10",
+                        "pages": [
+                            {
+                                "widgets": [
+                                    {
+                                        "type": "ITEM",
+                                        "x": "17",
+                                        "width": "7",
+                                        "fields": [
+                                            {
+                                                "type": "ITEM",
+                                                "name": "itemid",
+                                                "value": {
+                                                    "host": "Livebox5",
+                                                    "key": "IPv6DelegatedPrefix"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "ITEM",
+                                        "y": "19",
+                                        "width": "4",
+                                        "fields": [
+                                            {
+                                                "type": "ITEM",
+                                                "name": "itemid",
+                                                "value": {
+                                                    "host": "Livebox5",
+                                                    "key": "ONUState"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "GRAPH_CLASSIC",
+                                        "y": "26",
+                                        "width": "12",
+                                        "height": "5",
+                                        "fields": [
+                                            {
+                                                "type": "INTEGER",
+                                                "name": "source_type",
+                                                "value": "1"
+                                            },
+                                            {
+                                                "type": "ITEM",
+                                                "name": "itemid",
+                                                "value": {
+                                                    "host": "Livebox5",
+                                                    "key": "MaxBitRateSupported"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "ITEM",
+                                        "x": "5",
+                                        "width": "3",
+                                        "fields": [
+                                            {
+                                                "type": "ITEM",
+                                                "name": "itemid",
+                                                "value": {
+                                                    "host": "Livebox5",
+                                                    "key": "IPAddress"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "ITEM",
+                                        "x": "2",
+                                        "width": "3",
+                                        "fields": [
+                                            {
+                                                "type": "ITEM",
+                                                "name": "itemid",
+                                                "value": {
+                                                    "host": "Livebox5",
+                                                    "key": "UpTime"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "ITEM",
+                                        "width": "2",
+                                        "fields": [
+                                            {
+                                                "type": "ITEM",
+                                                "name": "itemid",
+                                                "value": {
+                                                    "host": "Livebox5",
+                                                    "key": "LinkState"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "ITEM",
+                                        "x": "8",
+                                        "width": "9",
+                                        "fields": [
+                                            {
+                                                "type": "ITEM",
+                                                "name": "itemid",
+                                                "value": {
+                                                    "host": "Livebox5",
+                                                    "key": "IPv6Address"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "GRAPH_CLASSIC",
+                                        "y": "21",
+                                        "width": "24",
+                                        "height": "5",
+                                        "fields": [
+                                            {
+                                                "type": "GRAPH",
+                                                "name": "graphid",
+                                                "value": {
+                                                    "host": "Livebox5",
+                                                    "name": "Booleans"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "GRAPH_CLASSIC",
+                                        "x": "4",
+                                        "y": "17",
+                                        "width": "20",
+                                        "height": "4",
+                                        "fields": [
+                                            {
+                                                "type": "GRAPH",
+                                                "name": "graphid",
+                                                "value": {
+                                                    "host": "Livebox5",
+                                                    "name": "UpTime"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "GRAPH_CLASSIC",
+                                        "y": "2",
+                                        "width": "12",
+                                        "height": "5",
+                                        "fields": [
+                                            {
+                                                "type": "GRAPH",
+                                                "name": "graphid",
+                                                "value": {
+                                                    "host": "Livebox5",
+                                                    "name": "DownstreamRates"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "ITEM",
+                                        "y": "17",
+                                        "width": "4",
+                                        "fields": [
+                                            {
+                                                "type": "ITEM",
+                                                "name": "itemid",
+                                                "value": {
+                                                    "host": "Livebox5",
+                                                    "key": "NumberOfReboots"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "GRAPH_CLASSIC",
+                                        "x": "16",
+                                        "y": "12",
+                                        "width": "8",
+                                        "height": "5",
+                                        "fields": [
+                                            {
+                                                "type": "INTEGER",
+                                                "name": "source_type",
+                                                "value": "1"
+                                            },
+                                            {
+                                                "type": "ITEM",
+                                                "name": "itemid",
+                                                "value": {
+                                                    "host": "Livebox5",
+                                                    "key": "Bias"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "GRAPH_CLASSIC",
+                                        "x": "8",
+                                        "y": "12",
+                                        "width": "8",
+                                        "height": "5",
+                                        "fields": [
+                                            {
+                                                "type": "INTEGER",
+                                                "name": "source_type",
+                                                "value": "1"
+                                            },
+                                            {
+                                                "type": "ITEM",
+                                                "name": "itemid",
+                                                "value": {
+                                                    "host": "Livebox5",
+                                                    "key": "Temperature"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "GRAPH_CLASSIC",
+                                        "y": "12",
+                                        "width": "8",
+                                        "height": "5",
+                                        "fields": [
+                                            {
+                                                "type": "INTEGER",
+                                                "name": "source_type",
+                                                "value": "1"
+                                            },
+                                            {
+                                                "type": "ITEM",
+                                                "name": "itemid",
+                                                "value": {
+                                                    "host": "Livebox5",
+                                                    "key": "Voltage"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "GRAPH_CLASSIC",
+                                        "x": "12",
+                                        "y": "7",
+                                        "width": "12",
+                                        "height": "5",
+                                        "fields": [
+                                            {
+                                                "type": "INTEGER",
+                                                "name": "source_type",
+                                                "value": "1"
+                                            },
+                                            {
+                                                "type": "ITEM",
+                                                "name": "itemid",
+                                                "value": {
+                                                    "host": "Livebox5",
+                                                    "key": "SignalRxPower"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "GRAPH_CLASSIC",
+                                        "y": "7",
+                                        "width": "12",
+                                        "height": "5",
+                                        "fields": [
+                                            {
+                                                "type": "INTEGER",
+                                                "name": "source_type",
+                                                "value": "1"
+                                            },
+                                            {
+                                                "type": "ITEM",
+                                                "name": "itemid",
+                                                "value": {
+                                                    "host": "Livebox5",
+                                                    "key": "SignalTxPower"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "GRAPH_CLASSIC",
+                                        "x": "12",
+                                        "y": "2",
+                                        "width": "12",
+                                        "height": "5",
+                                        "fields": [
+                                            {
+                                                "type": "GRAPH",
+                                                "name": "graphid",
+                                                "value": {
+                                                    "host": "Livebox5",
+                                                    "name": "UpstreamRates"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "PLAIN_TEXT",
+                                        "x": "12",
+                                        "y": "26",
+                                        "width": "12",
+                                        "height": "5",
+                                        "fields": [
+                                            {
+                                                "type": "ITEM",
+                                                "name": "itemids",
+                                                "value": {
+                                                    "host": "Livebox5",
+                                                    "key": "ConnectionState"
+                                                }
+                                            },
+                                            {
+                                                "type": "ITEM",
+                                                "name": "itemids",
+                                                "value": {
+                                                    "host": "Livebox5",
+                                                    "key": "DeviceLog"
+                                                }
+                                            },
+                                            {
+                                                "type": "ITEM",
+                                                "name": "itemids",
+                                                "value": {
+                                                    "host": "Livebox5",
+                                                    "key": "DeviceStatus"
+                                                }
+                                            },
+                                            {
+                                                "type": "ITEM",
+                                                "name": "itemids",
+                                                "value": {
+                                                    "host": "Livebox5",
+                                                    "key": "EnabledOptions"
+                                                }
+                                            },
+                                            {
+                                                "type": "ITEM",
+                                                "name": "itemids",
+                                                "value": {
+                                                    "host": "Livebox5",
+                                                    "key": "GponState"
+                                                }
+                                            },
+                                            {
+                                                "type": "ITEM",
+                                                "name": "itemids",
+                                                "value": {
+                                                    "host": "Livebox5",
+                                                    "key": "IPTVMode"
+                                                }
+                                            },
+                                            {
+                                                "type": "ITEM",
+                                                "name": "itemids",
+                                                "value": {
+                                                    "host": "Livebox5",
+                                                    "key": "LastConnectionError"
+                                                }
+                                            },
+                                            {
+                                                "type": "ITEM",
+                                                "name": "itemids",
+                                                "value": {
+                                                    "host": "Livebox5",
+                                                    "key": "LinkState"
+                                                }
+                                            },
+                                            {
+                                                "type": "ITEM",
+                                                "name": "itemids",
+                                                "value": {
+                                                    "host": "Livebox5",
+                                                    "key": "LinkType"
+                                                }
+                                            },
+                                            {
+                                                "type": "ITEM",
+                                                "name": "itemids",
+                                                "value": {
+                                                    "host": "Livebox5",
+                                                    "key": "OfferName"
+                                                }
+                                            },
+                                            {
+                                                "type": "ITEM",
+                                                "name": "itemids",
+                                                "value": {
+                                                    "host": "Livebox5",
+                                                    "key": "OfferType"
+                                                }
+                                            },
+                                            {
+                                                "type": "ITEM",
+                                                "name": "itemids",
+                                                "value": {
+                                                    "host": "Livebox5",
+                                                    "key": "PonId"
+                                                }
+                                            },
+                                            {
+                                                "type": "ITEM",
+                                                "name": "itemids",
+                                                "value": {
+                                                    "host": "Livebox5",
+                                                    "key": "Protocol"
+                                                }
+                                            },
+                                            {
+                                                "type": "ITEM",
+                                                "name": "itemids",
+                                                "value": {
+                                                    "host": "Livebox5",
+                                                    "key": "WanMode"
+                                                }
+                                            },
+                                            {
+                                                "type": "ITEM",
+                                                "name": "itemids",
+                                                "value": {
+                                                    "host": "Livebox5",
+                                                    "key": "WanState"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "graphs": [
+            {
+                "uuid": "a44f198b714141ee8f27da32520fd436",
+                "name": "Booleans",
+                "height": "150",
+                "yaxismax": "1",
+                "show_work_period": "NO",
+                "ymin_type_1": "FIXED",
+                "ymax_type_1": "FIXED",
+                "graph_items": [
+                    {
+                        "color": "1A7C11",
+                        "calc_fnc": "ALL",
+                        "item": {
+                            "host": "Livebox5",
+                            "key": "ConnectionError"
+                        }
+                    },
+                    {
+                        "sortorder": "1",
+                        "color": "274482",
+                        "calc_fnc": "ALL",
+                        "item": {
+                            "host": "Livebox5",
+                            "key": "DefaultsLoaded"
+                        }
+                    },
+                    {
+                        "sortorder": "2",
+                        "color": "F63100",
+                        "calc_fnc": "ALL",
+                        "item": {
+                            "host": "Livebox5",
+                            "key": "FactoryResetScheduled"
+                        }
+                    },
+                    {
+                        "sortorder": "3",
+                        "color": "2774A4",
+                        "calc_fnc": "ALL",
+                        "item": {
+                            "host": "Livebox5",
+                            "key": "ResetOccurred"
+                        }
+                    },
+                    {
+                        "sortorder": "4",
+                        "color": "A54F10",
+                        "calc_fnc": "ALL",
+                        "item": {
+                            "host": "Livebox5",
+                            "key": "RestoreOccurred"
+                        }
+                    },
+                    {
+                        "sortorder": "5",
+                        "color": "FC6EA3",
+                        "calc_fnc": "ALL",
+                        "item": {
+                            "host": "Livebox5",
+                            "key": "StandbyOccurred"
+                        }
+                    },
+                    {
+                        "sortorder": "6",
+                        "color": "6C59DC",
+                        "calc_fnc": "ALL",
+                        "item": {
+                            "host": "Livebox5",
+                            "key": "UpgradeOccurred"
+                        }
+                    },
+                    {
+                        "sortorder": "7",
+                        "color": "AC8C14",
+                        "calc_fnc": "ALL",
+                        "item": {
+                            "host": "Livebox5",
+                            "key": "OmciIsTmOwner"
+                        }
+                    },
+                    {
+                        "sortorder": "8",
+                        "color": "611F27",
+                        "calc_fnc": "ALL",
+                        "item": {
+                            "host": "Livebox5",
+                            "key": "VeipPptpUni"
+                        }
+                    }
+                ]
+            },
+            {
+                "uuid": "cae060fb70344c5dada2481f7cd447f0",
+                "name": "DownstreamRates",
+                "graph_items": [
+                    {
+                        "drawtype": "FILLED_REGION",
+                        "color": "1A7C11",
+                        "calc_fnc": "ALL",
+                        "item": {
+                            "host": "Livebox5",
+                            "key": "DownstreamCurrRate"
+                        }
+                    },
+                    {
+                        "sortorder": "1",
+                        "drawtype": "BOLD_LINE",
+                        "color": "274482",
+                        "calc_fnc": "ALL",
+                        "item": {
+                            "host": "Livebox5",
+                            "key": "DownstreamMaxRate"
+                        }
+                    }
+                ]
+            },
+            {
+                "uuid": "dbb17bdc6e1b43e0b5d6ddc22bbdf988",
+                "name": "UpstreamRates",
+                "graph_items": [
+                    {
+                        "drawtype": "FILLED_REGION",
+                        "color": "1A7C11",
+                        "calc_fnc": "ALL",
+                        "item": {
+                            "host": "Livebox5",
+                            "key": "UpstreamCurrRate"
+                        }
+                    },
+                    {
+                        "sortorder": "1",
+                        "drawtype": "BOLD_LINE",
+                        "color": "274482",
+                        "calc_fnc": "ALL",
+                        "item": {
+                            "host": "Livebox5",
+                            "key": "UpstreamMaxRate"
+                        }
+                    }
+                ]
+            },
+            {
+                "uuid": "6c40daff680c48a7bd2c842d3113855d",
+                "name": "UpTime",
+                "graph_items": [
+                    {
+                        "color": "D32F2F",
+                        "yaxisside": "RIGHT",
+                        "calc_fnc": "ALL",
+                        "item": {
+                            "host": "Livebox5",
+                            "key": "NumberOfReboots"
+                        }
+                    },
+                    {
+                        "sortorder": "1",
+                        "color": "274482",
+                        "calc_fnc": "ALL",
+                        "item": {
+                            "host": "Livebox5",
+                            "key": "UpTime"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

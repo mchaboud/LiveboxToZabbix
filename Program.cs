@@ -33,21 +33,45 @@ internal class Program
             Configuration.Instance.LiveboxLogin = Environment.GetEnvironmentVariable("LTZ_LiveboxLogin") ?? Configuration.Instance.LiveboxLogin;
             Configuration.Instance.LiveboxPassword = Environment.GetEnvironmentVariable("LTZ_LiveboxPassword") ?? Configuration.Instance.LiveboxPassword;
             Configuration.Instance.LiveboxUrl = Environment.GetEnvironmentVariable("LTZ_LiveboxUrl") ?? Configuration.Instance.LiveboxUrl;
+            Configuration.Instance.LiveboxVersion = int.TryParse(Environment.GetEnvironmentVariable("LTZ_LiveboxVersion"), out tmpVal) ? tmpVal : Configuration.Instance.LiveboxVersion;
         }
 
-        Livebox4WS livebox = new Livebox4WS(Configuration.Instance.LiveboxLogin, Configuration.Instance.LiveboxPassword, Configuration.Instance.LiveboxUrl);
-
-        while (true)
+        if (Configuration.Instance.LiveboxVersion == 5)
         {
-            livebox.PlayAuthAsync().GetAwaiter().GetResult();
-            for (int i = 0; i < 30 * 4; i++)
-            {
-                ExceptionHandler(() => livebox.RetrieveADSLStatsAsync().GetAwaiter().GetResult());
-                ExceptionHandler(() => livebox.RetrieveADSLStats2Async().GetAwaiter().GetResult());
-                ExceptionHandler(() => livebox.RetrieveWanStatusAsync().GetAwaiter().GetResult());
+            Livebox5WS livebox = new Livebox5WS(Configuration.Instance.LiveboxLogin, Configuration.Instance.LiveboxPassword, Configuration.Instance.LiveboxUrl);
 
-                Thread.Sleep(15 * 1000);
+            while (true)
+            {
+                livebox.PlayAuthAsync().GetAwaiter().GetResult();
+                for (int i = 0; i < 30 * 4; i++)
+                {
+                    ExceptionHandler(() => livebox.RetrieveDeviceInfo().GetAwaiter().GetResult());
+                    ExceptionHandler(() => livebox.RetrieveNMC().GetAwaiter().GetResult());
+                    ExceptionHandler(() => livebox.RetrieveONTStatusAsync().GetAwaiter().GetResult());
+                    ExceptionHandler(() => livebox.RetrieveWanStatusAsync().GetAwaiter().GetResult());
+
+                    Thread.Sleep(15 * 1000);
+                }
             }
         }
+        else if (Configuration.Instance.LiveboxVersion == 4)
+        {
+            Livebox4WS livebox = new Livebox4WS(Configuration.Instance.LiveboxLogin, Configuration.Instance.LiveboxPassword, Configuration.Instance.LiveboxUrl);
+
+            while (true)
+            {
+                livebox.PlayAuthAsync().GetAwaiter().GetResult();
+                for (int i = 0; i < 30 * 4; i++)
+                {
+                    ExceptionHandler(() => livebox.RetrieveADSLStatsAsync().GetAwaiter().GetResult());
+                    ExceptionHandler(() => livebox.RetrieveADSLStats2Async().GetAwaiter().GetResult());
+                    ExceptionHandler(() => livebox.RetrieveWanStatusAsync().GetAwaiter().GetResult());
+
+                    Thread.Sleep(15 * 1000);
+                }
+            }
+        }
+        else
+            throw new Exception("Unknown Livebox version");
     }
 }

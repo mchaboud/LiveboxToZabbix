@@ -17,4 +17,5 @@ public class Configuration
     public string ZabbixServer { get; set; } = "192.168.1.100";
     public string ZabbixHostToPopulate { get; set; } = "adsl";
     public int ZabbixServerPort { get; set; } = 10051;
+    public int LiveboxVersion { get;  set; } = 5;
 }

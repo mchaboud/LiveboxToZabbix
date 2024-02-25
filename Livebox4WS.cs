@@ -1,20 +1,6 @@
-﻿using LiveboxToZabbix;
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Net;
-using System.Net.Http.Headers;
+﻿using System.Net.Http.Headers;
 using System.Net.Http.Json;
-using System.Net.Mail;
-using System.Net.Security;
-using System.Net.Sockets;
-using System.Text;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
 using Zabbix_Sender;
-using static LiveboxToZabbix.Livebox4WS;
-using static LiveboxToZabbix.Livebox4WS.GetDSLStats2Resp;
 
 namespace LiveboxToZabbix;
 internal class Livebox4WS
@@ -171,18 +157,18 @@ internal class Livebox4WS
                     {
                         data = new ZS_Data[]
                         {
-                            new ZS_Data(Configuration.Instance.ZabbixHostToPopulate,"WanState", resp.data.WanState.ToString()),
-                            new ZS_Data(Configuration.Instance.ZabbixHostToPopulate,"LinkType", resp.data.LinkType.ToString()),
-                            new ZS_Data(Configuration.Instance.ZabbixHostToPopulate,"LinkState", resp.data.LinkState.ToString()),
-                            new ZS_Data(Configuration.Instance.ZabbixHostToPopulate,"MACAddress", resp.data.MACAddress.ToString()),
-                            new ZS_Data(Configuration.Instance.ZabbixHostToPopulate,"Protocol", resp.data.Protocol.ToString()),
-                            new ZS_Data(Configuration.Instance.ZabbixHostToPopulate,"ConnectionState", resp.data.ConnectionState.ToString()),
-                            new ZS_Data(Configuration.Instance.ZabbixHostToPopulate,"LastConnectionError", resp.data.LastConnectionError.ToString()),
-                            new ZS_Data(Configuration.Instance.ZabbixHostToPopulate,"IPAddress", resp.data.IPAddress.ToString()),
-                            new ZS_Data(Configuration.Instance.ZabbixHostToPopulate,"RemoteGateway", resp.data.RemoteGateway.ToString()),
-                            new ZS_Data(Configuration.Instance.ZabbixHostToPopulate,"DNSServers", resp.data.DNSServers.ToString()),
-                            new ZS_Data(Configuration.Instance.ZabbixHostToPopulate,"IPv6Address", resp.data.IPv6Address.ToString()),
-                            new ZS_Data(Configuration.Instance.ZabbixHostToPopulate,"IPv6DelegatedPrefix", resp.data.IPv6DelegatedPrefix.ToString()),
+                            new ZS_Data(Configuration.Instance.ZabbixHostToPopulate,"WanState", resp?.data?.WanState??"N/A"),
+                            new ZS_Data(Configuration.Instance.ZabbixHostToPopulate,"LinkType", resp?.data?.LinkType??"N/A"),
+                            new ZS_Data(Configuration.Instance.ZabbixHostToPopulate,"LinkState", resp ?.data?.LinkState ?? "N/A"),
+                            new ZS_Data(Configuration.Instance.ZabbixHostToPopulate,"MACAddress", resp ?.data?.MACAddress ?? "N/A"),
+                            new ZS_Data(Configuration.Instance.ZabbixHostToPopulate,"Protocol", resp ?.data?.Protocol ?? "N/A"),
+                            new ZS_Data(Configuration.Instance.ZabbixHostToPopulate,"ConnectionState", resp ?.data?.ConnectionState??"N/A"),
+                            new ZS_Data(Configuration.Instance.ZabbixHostToPopulate,"LastConnectionError", resp ?.data?.LastConnectionError ?? "N/A"),
+                            new ZS_Data(Configuration.Instance.ZabbixHostToPopulate,"IPAddress", resp ?.data?.IPAddress ?? "N/A"),
+                            new ZS_Data(Configuration.Instance.ZabbixHostToPopulate,"RemoteGateway", resp ?.data?.RemoteGateway ?? "N/A"),
+                            new ZS_Data(Configuration.Instance.ZabbixHostToPopulate,"DNSServers", resp ?.data?.DNSServers ?? "N/A"),
+                            new ZS_Data(Configuration.Instance.ZabbixHostToPopulate,"IPv6Address", resp ?.data?.IPv6Address??"N/A"),
+                            new ZS_Data(Configuration.Instance.ZabbixHostToPopulate,"IPv6DelegatedPrefix", resp?.data?.IPv6DelegatedPrefix??"N/A"),
                         }
                     };
                     return r.Send(Configuration.Instance.ZabbixServer, Configuration.Instance.ZabbixServerPort);

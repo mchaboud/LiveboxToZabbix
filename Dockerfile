@@ -3,7 +3,7 @@
 FROM amd64/alpine:latest
 RUN apk upgrade --no-cache && apk add --no-cache  openssl libgcc libstdc++ ncurses-libs libc6-compat gcompat icu-libs
 WORKDIR /app
-COPY bin/Publish/net7.0/LiveboxToZabbix .
+COPY bin/Publish/net8.0/LiveboxToZabbix .
 ENTRYPOINT ["/app/LiveboxToZabbix"]
 
 #Reminder how to generate the package and export it for dsm
